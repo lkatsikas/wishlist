@@ -1,6 +1,6 @@
 # Wishlist
 
-Web application using Java, Spring and MongoDB.
+Playground application for reactive web application using Java, Spring, Mongo  
 
 ## Description
 
