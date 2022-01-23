@@ -1,0 +1,37 @@
+version: '2'
+services:
+    redis:
+        image: 'bitnami/redis:5.0'
+        environment:
+          # ALLOW_EMPTY_PASSWORD is recommended only for development.
+          - ALLOW_EMPTY_PASSWORD=yes
+          - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+        ports:
+          - '6379:6379'
+        volumes:
+          - 'redis_data:/bitnami/redis/data'
+    mongodb:
+        image: mongo:latest
+        container_name: "mongodb"
+        environment:
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+        volumes:
+          - ./data/db:/data/db
+        ports:
+            - 27017:27017
+        command: mongod --smallfiles --logpath=/dev/null # --quiet
+    rabbitmq:
+        image: 'bitnami/rabbitmq:3.7'
+        ports:
+          - '4369:4369'
+          - '5672:5672'
+          - '25672:25672'
+          - '15672:15672'
+        volumes:
+          - 'rabbitmq_data:/bitnami'
+volumes:
+  redis_data:
+    driver: local
+  rabbitmq_data:
+    driver: local  
