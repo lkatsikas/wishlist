@@ -1,0 +1,5 @@
+com/lkats/wishlist/books/repository/domain/Book$BookBuilder.class
+com/lkats/wishlist/books/repository/domain/Book.class
+com/lkats/wishlist/WishListApplication.class
+com/lkats/wishlist/books/repository/BooksRepository.class
+com/lkats/wishlist/books/controller/BooksController.class

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.lkats.wishlist.WishListApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.942 s - in com.lkats.wishlist.WishListApplicationTests
